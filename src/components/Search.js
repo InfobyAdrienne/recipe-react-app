@@ -12,7 +12,14 @@ function Search() {
   }, [])
 
   return (
+      <div>
         <h1>Search for recipes!</h1>
+        <form>
+          <input type="text" placeholder="Search.."></input>
+          <button  type="submit" value="Submit">Search</button>
+        </form>
+        </div>
+        
     )
   
 }
