@@ -1,3 +1,19 @@
+### User story 1
+As a user\
+I want to be able to list out the ingredients I have in my fridge\
+So that I can communicate with the API to let it know what ingredients I have available
+
+### User story 2
+As a user\
+I want to be presented with the list of recipes resulting from my input\
+So that I can see the range of recipes available using my ingredients
+
+### User story 3
+As a user\
+I want to be able to click on my preferred recipe\
+So that I can see the instruction on how to prepare the meal
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
