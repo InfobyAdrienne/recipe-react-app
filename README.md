@@ -13,10 +13,6 @@ As a user \
 I want to be able to click on my preferred recipe \
 So that I can see the instruction on how to prepare the meal \
 
-
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
