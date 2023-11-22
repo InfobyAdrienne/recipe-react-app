@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Search() {
   const [ingredient, setIngredient] = useState("");
-  const [meal, setMeal] = useState("");
+  const [meal, setMeal] = useState([]);
 
   function handleChange(inputEvent) {
     setIngredient(inputEvent.target.value);
