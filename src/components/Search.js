@@ -21,11 +21,6 @@ function Search() {
       });
   }
 
-  const handleChange = (event) => {
-    setIngredient(event.target.value);
-  }
-
-  
   return (
     <div>
       <h1>Search for recipes!</h1>
