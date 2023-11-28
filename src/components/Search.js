@@ -16,15 +16,11 @@ function Search() {
     setIngredient(event.target.value);
   }
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
   
   return (
       <div>
         <h1>Search for recipes!</h1>
-        <form  onSubmit={}>
+        <form>
           <input   onChange={handleChange} type="text" placeholder="Search.."></input>
           <button  type="submit" value="Submit">Search</button>
         </form>
