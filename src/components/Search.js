@@ -20,21 +20,43 @@ function Search() {
         console.log(data);
       });
   }
-
+  
   return (
     <div>
       <h1>Search for recipes!</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           onChange={handleChange}
           type="text"
           placeholder="Search.."
         ></input>
+      </form>
+
+      <form>
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder="Search.." 
+        ></input>
+     </form>
+
+      <form>
+        <input
+          onChange={handleChange}
+          type="text"
+           placeholder="Search.."
+        ></input>
+      </form>
+
+      <form onSubmit={handleSubmit}>
         <button type="submit" value="Submit">
           Search
         </button>
       </form>
+        
+
     </div>
+    
   );
 }
 export default Search;
