@@ -21,6 +21,7 @@ function Search() {
       });
   }
   
+  // using meal.map to be able to have result printed on screen
   return (
     <div>
       <h1>Search for recipes!</h1>
@@ -53,9 +54,11 @@ function Search() {
           Search
         </button>
       </form>
-        
+      
 
     </div>
+
+   
     
   );
 }
