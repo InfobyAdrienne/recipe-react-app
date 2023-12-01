@@ -6,7 +6,7 @@ function Search() {
   const [ingredient2, setIngredient2] = useState("");
   const [ingredient3, setIngredient3] = useState("");
 
-  const [meal, setMeal] = useState([]);
+  const [mealData, setMealData] = useState([]);
 
   function handleChange(inputEvent) {
     setIngredient(inputEvent.target.value);
@@ -27,7 +27,7 @@ function Search() {
     )
       .then((response) => response.json())
       .then((data) => {
-        setMeal(data);
+        setMealData(data);
         console.log(data);
       });
   }
@@ -47,13 +47,19 @@ function Search() {
           placeholder="Ingredient 2"
         ></input>
         <input
-          onChange={handleChange2}
+          onChange={handleChange3}
           type="text"
           placeholder="Ingredient 3"
         ></input>
         <button type="submit" value="Submit">
           Search
         </button>
+      {mealData.map((meal) => (
+        <div>
+        <h1 className="user">{meal.title}</h1>
+        <img src={meal.image}></img>
+        </div>
+      ))}
       </form>
     </div>
   );
