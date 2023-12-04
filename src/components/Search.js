@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
+import Result from "./Result";
+
 function Search() {
   const [ingredient, setIngredient] = useState("");
   const [ingredient2, setIngredient2] = useState("");
@@ -56,7 +58,7 @@ function Search() {
         </button>
       {mealData.map((meal) => (
         <div>
-        <h1 className="user">{meal.title}</h1>
+        <h1 onClick = {Result(meal.id)} className={meal.id}>{meal.title}</h1>
         <img src={meal.image}></img>
         </div>
       ))}
