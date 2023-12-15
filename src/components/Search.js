@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
+var API_KEY = process.env.REACT_APP_API_KEY
 
-import Result from "./Result";
-
-function Search() {
+function Search({ onMealClick }) {
   const [ingredient, setIngredient] = useState("");
   const [ingredient2, setIngredient2] = useState("");
   const [ingredient3, setIngredient3] = useState("");
@@ -25,7 +24,7 @@ function Search() {
   function handleSubmit(submitEvent) {
     submitEvent.preventDefault();
     fetch(
-      `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient},${ingredient2},${ingredient3}&apiKey=${process.env.REACT_APP_API_KEY}`
+      `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient},${ingredient2},${ingredient3}&apiKey=${API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -33,7 +32,7 @@ function Search() {
         console.log(data);
       });
   }
-  
+
   // using meal.map to be able to have result printed on screen
   return (
     <div>
@@ -44,7 +43,7 @@ function Search() {
           type="text"
           placeholder="Ingredient 1"
         ></input>
-                <input
+        <input
           onChange={handleChange2}
           type="text"
           placeholder="Ingredient 2"
@@ -56,39 +55,55 @@ function Search() {
         ></input>
       </form>
 
-      <form>
-        <input
-          onChange={handleChange}
-          type="text"
-          placeholder="Search.." 
-        ></input>
-     </form>
-
-      <form>
-        <input
-          onChange={handleChange}
-          type="text"
-           placeholder="Search.."
-        ></input>
-      </form>
-
       <form onSubmit={handleSubmit}>
         <button type="submit" value="Submit">
           Search
         </button>
-      {mealData.map((meal) => (
-        <div>
-        <h1 onClick = {Result(meal.id)} className={meal.id}>{meal.title}</h1>
-        <img src={meal.image}></img>
+        {mealData.map((meal) => (
+          <div className="column">
+          <div>
+            <img
+              className="meal-image"
+              src={meal.image}
+              alt={meal.title}
+            />
+            <h2
+              className="meal-title"
+              onClick={() => onMealClick(meal.id)}
+            >
+              {meal.title}
+            </h2>
+            <p className="meal-used-ingredients">
+              <strong>Used Ingredients:</strong>
+            </p>
+            <p>
+              {meal.usedIngredients.map((ingredient) => (
+                <div key={ingredient.id}>
+                  <p className="ingredient">{ingredient.original}</p>
+                </div>
+              ))}
+            </p>
+            <br />
+            <p className="meal-missed-ingredients">
+              <strong>Missed Ingredients:</strong>
+            </p>
+            <p>
+              {meal.missedIngredients.map((ingredient) => (
+                <div key={ingredient.id}>
+                  <p className="ingredient">{ingredient.original}</p>
+                </div>
+              ))}
+            </p>
+          </div>
         </div>
-      ))}
+        ))}
       </form>
-      
+
 
     </div>
 
-   
-    
+
+
   );
 }
 export default Search;
