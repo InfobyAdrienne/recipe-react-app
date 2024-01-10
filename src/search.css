@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
+.meal-title{
+  font-family: "Poiret One";
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p{
+  font-family: "Poiret One";
+  font-size: 15x;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+.meal-container{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+}
+
+.column {
+  padding: 16px;
+  height: auto;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.meal-image{
+  margin-top: 20px;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 6px 6px orange;
+}
+
+.submit {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0 auto;
+  display: block;
+  font-family: "Poiret One";
+  border-radius: 10px;
+}
+
+.submit:after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.submit:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 33%;
+  padding: 12px 20px;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  background-color: white;
+  transition: 0.3s;
+  justify-content: center;
+  text-align: center;
+  border-color: #ffe54c;
+}
+
+.button-53 {
+  margin: 8px;
+  background-color: #ffe54c;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: orange;
+  display: flex;
+  font-family: "Poiret One";  
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 1px solid orange;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}

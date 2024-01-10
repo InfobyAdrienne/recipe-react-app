@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
+h1{
+  color: #ffe54c;
+  font-size: 70px;
+  font-family: "Poiret One";
+  text-align: center;
+  font-weight: 700;
+  background-color: orange;
+}
